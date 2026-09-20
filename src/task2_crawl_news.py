@@ -21,7 +21,11 @@ from pathlib import Path
 DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "news"
 
 ARTICLE_URLS = [
-    # TODO: Thêm ít nhất 5 public URL.
+    "https://www.python.org/blogs/",
+    "https://news.un.org/en/",
+    "https://www.who.int/news",
+    "https://www.nasa.gov/news/",
+    "https://www.unesco.org/en/news",
 ]
 
 
@@ -39,7 +43,22 @@ async def crawl_article(url: str) -> dict:
     #         "date_crawled": datetime.now().isoformat(),
     #         "content_markdown": result.markdown,
     #     }
-    raise NotImplementedError("Implement crawl_article")
+    from datetime import datetime, timezone
+
+    from crawl4ai import AsyncWebCrawler
+
+    async with AsyncWebCrawler() as crawler:
+        result = await crawler.arun(url=url)
+    metadata = result.metadata or {}
+    content = result.markdown or ""
+    if not str(content).strip():
+        raise ValueError(f"Crawler returned empty content for {url}")
+    return {
+        "url": url,
+        "title": str(metadata.get("title") or url),
+        "date_crawled": datetime.now(timezone.utc).isoformat(),
+        "content_markdown": str(content),
+    }
 
 
 async def crawl_all() -> None:
