@@ -1,0 +1,77 @@
+[
+  {
+    "question": "Đại học Bách khoa Hà Nội năm 2026 áp dụng những phương thức xét tuyển nào?",
+    "expected_answer": "Năm 2026, Đại học Bách khoa Hà Nội tuyển sinh theo 3 phương thức: 1. Phương thức xét tuyển tài năng (XTTN); 2. Phương thức xét tuyển theo điểm thi Đánh giá tư duy (ĐGTD); 3. Phương thức xét tuyển theo điểm thi tốt nghiệp THPT (THPT).",
+    "expected_context": "Năm 2026, Đại học Bách khoa Hà Nội tuyển sinh theo các phương thức sau: 1. Phương thức xét tuyển tài năng (XTTN); 2. Phương thức xét tuyển theo điểm thi Đánh giá tư duy (ĐGTD); 3. Phương thức xét tuyển theo điểm thi tốt nghiệp THPT (THPT)."
+  },
+  {
+    "question": "Thí sinh xét tuyển vào các chương trình giảng dạy bằng tiếng Anh tại ĐH Bách khoa Hà Nội năm 2026 cần đáp ứng điều kiện ngoại ngữ gì?",
+    "expected_answer": "Thí sinh cần đáp ứng một trong các điều kiện: có chứng chỉ tiếng Anh VSTEP trình độ B1 trở lên; hoặc có chứng chỉ IELTS Academic đạt 5.0 trở lên (hoặc tương đương); hoặc có điểm thi tốt nghiệp THPT môn tiếng Anh năm 2026 đạt từ 6.5 điểm trở lên.",
+    "expected_context": "Đối với thí sinh đăng ký xét tuyển vào các chương trình giảng dạy bằng tiếng Anh, các chương trình FL1 (Tiếng Anh KHKT và Công nghệ), FL3 (Tiếng Trung KH&CN) và FL4 (Tiếng Hàn KH&CN), ngoài các điều kiện cần thiết (theo các phương thức tuyển sinh), thí sinh cần đáp ứng một trong những điều kiện sau về trình độ tiếng Anh hoặc Ngoại ngữ tương đương như sau: +) Có chứng chỉ tiếng Anh VSTEP trình độ B1 trở lên hoặc; +) Có chứng chỉ IELTS (academic) đạt 5.0 trở lên hoặc tương đương hoặc; +) Có điểm thi tốt nghiệp THPT năm 2026 môn tiếng Anh hoặc tiếng Trung (đối với FL3) hoặc tiếng Hàn (đối với FL4) đạt từ 6.5 điểm trở lên."
+  },
+  {
+    "question": "Trường Đại học Giao thông Vận tải có mã trường tuyển sinh tại trụ sở Hà Nội và phân hiệu TP.HCM là gì?",
+    "expected_answer": "Mã trường trong tuyển sinh của Trường Đại học Giao thông Vận tải là GHA (Trụ sở chính tại Hà Nội) và GSA (Phân hiệu tại Thành phố Hồ Chí Minh).",
+    "expected_context": "2. Mã trường trong tuyển sinh: GHA (Trụ sở chính tại Hà Nội) và GSA (Phân hiệu tại thành phố Hồ Chí Minh)."
+  },
+  {
+    "question": "Trường Đại học Giao thông Vận tải quy định mức điểm cộng cho thí sinh có chứng chỉ IELTS từ 5.0 đến 7.0 trở lên như thế nào?",
+    "expected_answer": "Mức điểm cộng theo thang điểm 30 của Trường ĐH GTVT: IELTS 5.0 cộng 0.50 điểm; IELTS 5.5 cộng 0.75 điểm; IELTS 6.0 cộng 1.00 điểm; IELTS 6.5 cộng 1.25 điểm; IELTS từ 7.0 trở lên cộng 1.50 điểm.",
+    "expected_context": "Bảng điểm cộng dành cho các thí sinh có thành tích xuất sắc trong học tập như sau: Thí sinh có chứng chỉ IELTS từ 7.0 trở lên: 1.50; Thí sinh có chứng chỉ IELTS 6.5: 1.25; Thí sinh có chứng chỉ IELTS 6.0: 1.00; Thí sinh có chứng chỉ IELTS 5.5: 0.75; Thí sinh có chứng chỉ IELTS 5.0: 0.50. Lưu ý: Tổng điểm xét tuyển của thí sinh không vượt quá 30 điểm."
+  },
+  {
+    "question": "Học viện Nông nghiệp Việt Nam quy đổi điểm chứng chỉ IELTS sang điểm môn Ngoại ngữ thi tốt nghiệp THPT năm 2026 như thế nào?",
+    "expected_answer": "Thí sinh có chứng chỉ IELTS được quy đổi sang điểm môn ngoại ngữ: IELTS 4.0 quy đổi thành 6 điểm; IELTS 4.5 quy đổi thành 7 điểm; IELTS 5.0 quy đổi thành 8 điểm; IELTS 5.5 quy đổi thành 9 điểm; IELTS từ 6.0 trở lên quy đổi thành 10 điểm.",
+    "expected_context": "| TT | Điểm IELTS | Điểm quy đổi môn ngoại ngữ |\n| 1 | 4 | 6 |\n| 2 | 4.5 | 7 |\n| 3 | 5 | 8 |\n| 4 | 5.5 | 9 |\n| 5 | ≥6.0 | 10 |"
+  },
+  {
+    "question": "Mức điểm cộng tối đa cho thí sinh có chứng chỉ tiếng Anh quốc tế IELTS/SAT/ACT tại Học viện Nông nghiệp Việt Nam năm 2026 là bao nhiêu?",
+    "expected_answer": "Thí sinh có chứng chỉ tiếng Anh quốc tế IELTS/SAT/ACT sẽ được cộng tối đa 1.5 điểm vào điểm xét tuyển của phương thức xét tuyển 1 và 2.",
+    "expected_context": "Thí sinh có Chứng chỉ tiếng Anh quốc tế IELTS/SAT/ACT sẽ được cộng tối đa 1.5 điểm vào điểm xét tuyển của phương thức xét tuyển 1, 2. Bảng quy đổi điểm cộng như sau: IELTS 4.0 cộng 0.25; IELTS 4.5 cộng 0.5; IELTS 5.0 cộng 0.75; IELTS 5.5 cộng 1.0; IELTS 6.0 cộng 1.25; IELTS >= 6.5 cộng 1.5."
+  },
+  {
+    "question": "Thông báo tuyển sinh đại học năm 2026 của Trường Đại học Y Hà Nội áp dụng cho đối tượng và hình thức đào tạo nào?",
+    "expected_answer": "Thông báo tuyển sinh Đợt 2 năm 2026 của Trường Đại học Y Hà Nội áp dụng cho tuyển sinh liên thông trình độ đại học từ trình độ cao đẳng theo hình thức vừa làm vừa học đào tạo tại Hà Nội và tại Phân hiệu Thanh Hóa.",
+    "expected_context": "Trường Đại học Y Hà Nội thông báo Tuyển sinh liên thông trình độ đại học từ trình độ cao đẳng hình thức vừa làm vừa học năm 2026 (Đợt 2) đào tạo tại Hà Nội và tại Phân hiệu Thanh Hóa của Trường."
+  },
+  {
+    "question": "Trường Đại học Hàng hải Việt Nam tuyển sinh năm 2026 với bao nhiêu chỉ tiêu và bao nhiêu phương thức xét tuyển?",
+    "expected_answer": "Trường Đại học Hàng hải Việt Nam tuyển sinh 5.200 chỉ tiêu trình độ đại học chính quy với 55 chương trình đào tạo theo 6 phương thức xét tuyển độc lập (từ PT1 đến PT6).",
+    "expected_context": "Năm 2026, Trường Đại học Hàng hải Việt Nam tuyển sinh 5.200 chỉ tiêu trình độ Đại học chính quy với 55 chương trình đào tạo theo 06 phương thức xét tuyển độc lập: Phương thức 1 (PT1) đến Phương thức 6 (PT6)."
+  },
+  {
+    "question": "Tiêu chí chứng chỉ tiếng Anh quốc tế trong phương thức xét tuyển kết hợp (PT2) của Trường Đại học Hàng hải Việt Nam yêu cầu mức điểm tối thiểu bao nhiêu?",
+    "expected_answer": "Yêu cầu có chứng chỉ tiếng Anh quốc tế IELTS 5.0 hoặc TOEFL 494 ITP hoặc TOEFL 58 iBT hoặc TOEIC (Nghe & Đọc) 595 trở lên trong thời hạn tính đến ngày 30/08/2026.",
+    "expected_context": "Tiêu chí 1: Có chứng chỉ Tiếng Anh quốc tế IELTS 5.0 hoặc TOEFL 494 ITP hoặc TOEFL 58 iBT hoặc TOEIC (L&R) 595 trở lên trong thời hạn (tính đến ngày 30/08/2026)."
+  },
+  {
+    "question": "Ngưỡng điểm sàn chung áp dụng cho phương thức xét điểm thi tốt nghiệp THPT năm 2026 tại Trường Đại học Mỏ - Địa chất là bao nhiêu?",
+    "expected_answer": "Ngưỡng điểm sàn chung là tổng điểm 3 môn thi tốt nghiệp THPT theo tổ hợp xét tuyển (hoặc sử dụng điểm thi môn Toán, Ngữ văn và một môn khác) đạt tối thiểu 15,00 điểm theo thang điểm 30.",
+    "expected_context": "Ngưỡng điểm sàn chung: Tổng điểm 03 môn thi tốt nghiệp THPT (kỳ thi trung học nghề đối với đối tượng trung học nghề) các năm theo tổ hợp xét tuyển (hoặc sử dụng điểm thi môn Toán, Ngữ văn và một môn thi khác) đạt tối thiểu 15,00 điểm theo thang điểm 30."
+  },
+  {
+    "question": "Phương thức xét tuyển tổng hợp (Phương thức 2) tại Trường Đại học Bách Khoa TP.HCM năm 2026 chiếm bao nhiêu phần trăm tổng chỉ tiêu?",
+    "expected_answer": "Phương thức xét tuyển tổng hợp (Phương thức 2) là phương thức chủ đạo tại Trường Đại học Bách Khoa TP.HCM, chiếm từ 95% đến 99% tổng chỉ tiêu và áp dụng đồng bộ cho 8 đối tượng xét tuyển.",
+    "expected_context": "Phương thức 2: Xét tuyển tổng hợp, là phương thức chủ đạo, chiếm 95-99% tổng chỉ tiêu, được áp dụng đồng bộ cho 8 đối tượng xét tuyển."
+  },
+  {
+    "question": "Chuẩn đầu vào tiếng Anh tối thiểu đối với thí sinh dự tuyển vào chương trình Dạy và học bằng tiếng Anh, Tiên tiến tại ĐH Bách Khoa TP.HCM năm 2026 là gì?",
+    "expected_answer": "Yêu cầu tối thiểu là chứng chỉ IELTS Academic 6.0, hoặc TOEFL iBT 79, hoặc TOEIC Nghe-Đọc 730 & Nói-Viết 280, hoặc PTE Academic ≥ 52. Trường hợp đạt IELTS Academic 5.5 thì cần tham gia lớp bồi dưỡng tiếng Anh tăng cường.",
+    "expected_context": "Chuẩn đầu vào tiếng Anh đối với thí sinh dự tuyển vào CT Dạy & học bằng tiếng Anh, Tiên tiến, Chuyển tiếp Quốc tế Úc/ Mỹ/ New Zealand: 1. Yêu cầu tối thiểu: IELTS Academic 6.0/ TOEFL iBT 79/ TOEIC Nghe-Đọc 730 & Nói-Viết 280/ PTE (Academic) ≥ 52 2. Trường hợp đạt IELTS Academic 5.5."
+  },
+  {
+    "question": "Ngưỡng đảm bảo chất lượng đầu vào áp dụng cho phương thức xét tuyển tổng hợp của ĐH Bách Khoa TP.HCM năm 2026 là bao nhiêu?",
+    "expected_answer": "Áp dụng cho tất cả đối tượng thuộc phương thức Xét tuyển Tổng hợp: tổng điểm xét tuyển đạt từ 50 điểm trở lên theo thang 100 điểm.",
+    "expected_context": "Ngưỡng đảm bảo chất lượng đầu vào: Áp dụng cho tất cả đối tượng thuộc phương thức Xét tuyển Tổng hợp: tổng điểm xét tuyển đạt từ 50 điểm/thang 100."
+  },
+  {
+    "question": "Thí sinh có chứng chỉ tiếng Anh VSTEP hoặc quốc tế có được cộng điểm thưởng khi xét tuyển theo phương thức ĐGTD của ĐH Bách khoa Hà Nội không?",
+    "expected_answer": "Có, thí sinh có chứng chỉ Ngoại ngữ (tiếng Anh VSTEP, tiếng Anh quốc tế hoặc tương đương) có đăng ký xác thực trên hệ thống của ĐHBK Hà Nội sẽ được cộng điểm thưởng khi xét tuyển theo phương thức XTTN và xét tuyển theo điểm thi ĐGTD.",
+    "expected_context": "Thí sinh có chứng chỉ Ngoại ngữ (chứng chỉ tiếng Anh VSTEP, chứng chỉ tiếng Anh quốc tế hoặc các chứng chỉ Ngoại ngữ khác tương đương), có đăng ký xác thực trên hệ thống của ĐHBK Hà Nội có thể quy đổi thành điểm môn tiếng Anh khi xét tuyển theo điểm thi tốt nghiệp THPT (tổ hợp A01, D01, D07) và cộng điểm thưởng khi xét tuyển theo phương thức XTTN (diện 1.2, 1.3) và xét tuyển theo điểm thi ĐGTD."
+  },
+  {
+    "question": "Tổ hợp môn xét tuyển áp dụng cho ngành Công nghệ thông tin theo phương thức thi THPT tại Trường Đại học Mỏ - Địa chất năm 2026 gồm những tổ hợp nào?",
+    "expected_answer": "Ngành Công nghệ thông tin (mã ngành 7480201) tại Trường Đại học Mỏ - Địa chất xét tuyển theo các tổ hợp: A01, D01, B08, X25, X26, D10, D07, D09.",
+    "expected_context": "| 8 | 7480201 | Công nghệ thông tin | A01; D01; B08; X25; X26; D10; D07; D09 |"
+  }
+]
