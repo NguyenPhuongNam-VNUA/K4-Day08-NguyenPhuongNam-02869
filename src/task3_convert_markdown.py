@@ -34,7 +34,23 @@ def convert_legal_docs() -> None:
     #         (output_dir / f"{path.stem}.md").write_text(
     #             result.text_content, encoding="utf-8"
     #         )
-    raise NotImplementedError("Implement convert_legal_docs")
+    from markitdown import MarkItDown
+
+    legal_dir = LANDING_DIR / "legal"
+    output_dir = OUTPUT_DIR / "legal"
+    output_dir.mkdir(parents=True, exist_ok=True)
+    converter = MarkItDown()
+    for path in legal_dir.iterdir():
+        if path.suffix.lower() not in {".pdf", ".doc", ".docx"}:
+            continue
+        result = converter.convert(str(path))
+        content = str(result.text_content or "").strip()
+        if not content:
+            print(f"Skipped empty document: {path}")
+            continue
+        destination = output_dir / f"{path.stem}.md"
+        destination.write_text(content + "\n", encoding="utf-8")
+        print(f"Converted: {destination}")
 
 
 def convert_news_articles() -> None:
@@ -54,7 +70,30 @@ def convert_news_articles() -> None:
     #     (output_dir / f"{path.stem}.md").write_text(
     #         header + data["content_markdown"], encoding="utf-8"
     #     )
-    raise NotImplementedError("Implement convert_news_articles")
+    import json
+
+    news_dir = LANDING_DIR / "news"
+    output_dir = OUTPUT_DIR / "news"
+    output_dir.mkdir(parents=True, exist_ok=True)
+    required = {"url", "title", "date_crawled", "content_markdown"}
+    for path in news_dir.glob("*.json"):
+        data = json.loads(path.read_text(encoding="utf-8"))
+        if not required <= data.keys():
+            print(f"Skipped incomplete article: {path}")
+            continue
+        content = str(data["content_markdown"] or "").strip()
+        if not content:
+            print(f"Skipped empty article: {path}")
+            continue
+        header = (
+            f"# {str(data['title']).strip()}\n\n"
+            f"**Source:** {str(data['url']).strip()}\n\n"
+            f"**Crawled:** {str(data['date_crawled']).strip()}\n\n---\n\n"
+        )
+        (output_dir / f"{path.stem}.md").write_text(
+            header + content + "\n", encoding="utf-8"
+        )
+        print(f"Converted: {output_dir / f'{path.stem}.md'}")
 
 
 def convert_all() -> None:
