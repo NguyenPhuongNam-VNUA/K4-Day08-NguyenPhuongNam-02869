@@ -29,14 +29,22 @@ EMBEDDING_DIM = 1024
 COLLECTION_NAME = "rag_documents"
 
 
+_EMBED_MODEL = None
+
+
+def get_embed_model():
+    """Tải và cache embedding model."""
+    global _EMBED_MODEL
+    if _EMBED_MODEL is None:
+        from sentence_transformers import SentenceTransformer
+        _EMBED_MODEL = SentenceTransformer(EMBEDDING_MODEL)
+    return _EMBED_MODEL
+
+
 def embed_texts(texts: list[str]) -> list[list[float]]:
-    # TODO: Dispatch theo EMBEDDING_PROVIDER trong .env.
-    
-    #Provider local gợi ý:
-    from sentence_transformers import SentenceTransformer
-    model = SentenceTransformer(EMBEDDING_MODEL)
-    return model.encode(texts).tolist()
-    raise NotImplementedError("Implement embed_texts")
+    """Tạo embeddings vector cho danh sách texts."""
+    model = get_embed_model()
+    return model.encode(texts, show_progress_bar=False).tolist()
 
 
 def get_collection():
@@ -175,29 +183,27 @@ def chunk_documents(documents: list[dict]) -> list[dict]:
     return chunks
 
 
-def embed_chunks(chunks: list[dict]) -> list[dict]:
+def embed_chunks(chunks: list[dict], batch_size: int = 32) -> list[dict]:
     """Thêm embedding vào từng chunk."""
-    # TODO: Embed theo batch và giữ nguyên các field của chunk.
-    
-    vectors = embed_texts([chunk["content"] for chunk in chunks])
+    model = get_embed_model()
+    texts = [chunk["content"] for chunk in chunks]
+    vectors = model.encode(texts, batch_size=batch_size, show_progress_bar=True).tolist()
     for chunk, vector in zip(chunks, vectors):
         chunk["embedding"] = vector
     return chunks
-    raise NotImplementedError("Implement embed_chunks")
 
 
-def index_to_vectorstore(chunks: list[dict]) -> None:
-    """Upsert chunks vào ChromaDB."""
-    # TODO: Upsert ids, documents, embeddings và metadatas.
-    
+def index_to_vectorstore(chunks: list[dict], batch_size: int = 500) -> None:
+    """Upsert chunks vào ChromaDB theo batch."""
     collection = get_collection()
-    collection.upsert(
-        ids=[chunk["id"] for chunk in chunks],
-        documents=[chunk["content"] for chunk in chunks],
-        embeddings=[chunk["embedding"] for chunk in chunks],
-        metadatas=[chunk["metadata"] for chunk in chunks],
-    )
-    raise NotImplementedError("Implement index_to_vectorstore")
+    for i in range(0, len(chunks), batch_size):
+        batch = chunks[i : i + batch_size]
+        collection.upsert(
+            ids=[chunk["id"] for chunk in batch],
+            documents=[chunk["content"] for chunk in batch],
+            embeddings=[chunk["embedding"] for chunk in batch],
+            metadatas=[chunk["metadata"] for chunk in batch],
+        )
 
 
 def run_pipeline() -> None:

@@ -7,25 +7,42 @@ liệu và tên riêng. Output phải theo SearchResult và sort score giảm d�
 
 
 CORPUS: list[dict] = []
+_BM25_INDEX = None
+_CACHED_CORPUS_LEN = 0
+
+
+def init_corpus() -> list[dict]:
+    """Tự động tải corpus chunks từ data/standardized nếu chưa có."""
+    global CORPUS
+    if not CORPUS:
+        from .task4_chunking_indexing import load_documents, chunk_documents
+        CORPUS = chunk_documents(load_documents())
+    return CORPUS
 
 
 def build_bm25_index(corpus: list[dict]):
     """Tạo BM25 index từ cùng corpus chunks của Task 4."""
-    # TODO: Tokenize và tạo BM25 index.
-    
-    from rank_bm25 import BM25Okapi
+    from rank_bm25 import BM25Plus
     tokenized = [item["content"].lower().split() for item in corpus]
-    return BM25Okapi(tokenized)
-    raise NotImplementedError("Implement build_bm25_index")
+    return BM25Plus(tokenized)
 
 
 def lexical_search(query: str, top_k: int = 10) -> list[dict]:
     """Trả về BM25 SearchResult theo score giảm dần."""
-    # TODO: Tính BM25 scores và map lại corpus.
-    
     import numpy as np
-    bm25 = build_bm25_index(CORPUS)
-    scores = bm25.get_scores(query.lower().split())
+
+    global CORPUS, _BM25_INDEX, _CACHED_CORPUS_LEN
+    if not CORPUS:
+        init_corpus()
+
+    if not CORPUS:
+        return []
+
+    if _BM25_INDEX is None or _CACHED_CORPUS_LEN != len(CORPUS):
+        _BM25_INDEX = build_bm25_index(CORPUS)
+        _CACHED_CORPUS_LEN = len(CORPUS)
+
+    scores = _BM25_INDEX.get_scores(query.lower().split())
     indices = np.argsort(scores)[::-1][:top_k]
     results = []
     for index in indices:
@@ -40,7 +57,6 @@ def lexical_search(query: str, top_k: int = 10) -> list[dict]:
             "retrieval_method": "bm25",
         })
     return results
-    raise NotImplementedError("Implement lexical_search")
 
 
 if __name__ == "__main__":
