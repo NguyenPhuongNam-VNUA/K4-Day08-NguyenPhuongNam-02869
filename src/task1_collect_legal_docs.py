@@ -40,14 +40,14 @@ def download_documents() -> None:
     import requests
 
     sources = {
-        "openai_usage_policies.pdf": (
-            "https://cdn.openai.com/usage-policies/usage-policies.pdf"
+        "qghn.pdf": (
+            "https://cdnportal.vnu.edu.vn/data/0/documents/2026/03/20/upload_2/955-qd-dhqghn-2026.pdf"
         ),
-        "python_license.pdf": (
-            "https://docs.python.org/3/license.html"
+        "dai_hoc_y.pdf": (
+            "https://apiwebhmu.hmu.edu.vn/Upload/Images/ba09fde5-4e13-4e03-83c9-62592a5a4404.pdf"
         ),
-        "universal_declaration_human_rights.pdf": (
-            "https://www.ohchr.org/sites/default/files/UDHR/Documents/UDHR_Translations/eng.pdf"
+        "gtvt.pdf": (
+            "https://tuyensinh.utc2.edu.vn/uploads/img/files/414-Thong%20tin%20TS%20Dai%20hoc%20chinh%20quy%202026%20cap%20nhat.pdf"
         ),
     }
 

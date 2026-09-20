@@ -21,30 +21,16 @@ from pathlib import Path
 DATA_DIR = Path(__file__).parent.parent / "data" / "landing" / "news"
 
 ARTICLE_URLS = [
-    "https://www.python.org/blogs/",
-    "https://news.un.org/en/",
-    "https://www.who.int/news",
-    "https://www.nasa.gov/news/",
-    "https://www.unesco.org/en/news",
+    "https://vnua.edu.vn/tin-tuc-su-kien/dao-tao/thong-bao-tuyen-sinh-dai-hoc-he-chinh-quy-nam-2026-dot-2-58908",
+    "https://ts.hust.edu.vn/tin-tuc/thong-tin-tuyen-sinh-dai-hoc-chinh-quy-nam-2026",
+    "https://tuyensinh.vimaru.edu.vn/tuyensinh/2026-thong-bao-tuyen-sinh-dai-hoc-he-chinh-quy-nam-2026.vmu",
+    "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-mo-dia-chat-MDA.html",
+    "https://diemthi.tuyensinh247.com/de-an-tuyen-sinh/dai-hoc-bach-khoa-hcm-QSB.html",
 ]
 
 
 async def crawl_article(url: str) -> dict:
-    # TODO: Implement crawling logic.
-    #
-    # from datetime import datetime
-    # from crawl4ai import AsyncWebCrawler
-    #
-    # async with AsyncWebCrawler() as crawler:
-    #     result = await crawler.arun(url=url)
-    #     return {
-    #         "url": url,
-    #         "title": result.metadata.get("title", "Unknown"),
-    #         "date_crawled": datetime.now().isoformat(),
-    #         "content_markdown": result.markdown,
-    #     }
     from datetime import datetime, timezone
-
     from crawl4ai import AsyncWebCrawler
 
     async with AsyncWebCrawler() as crawler:
